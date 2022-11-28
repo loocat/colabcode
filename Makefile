@@ -3,4 +3,4 @@ style:
 	isort .
 
 install:
-	pip install .
+	pip3 install .
