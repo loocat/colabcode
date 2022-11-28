@@ -46,9 +46,10 @@ class ColabCode:
     @staticmethod
     def _install_code():
         subprocess.run(['rm', 'install.sh'], stdout=subprocess.PIPE),
-        subprocess.run(["wget", "https://code-server.dev/install.sh", '|', 'sh'],
+        subprocess.run(["wget", "https://code-server.dev/install.sh"],
             stdout=subprocess.PIPE
-        )
+        ),
+        subprocess.run(["sh", "install.sh"], stdout=subprocess.PIPE)
 
     @staticmethod
     def _install_extensions():
